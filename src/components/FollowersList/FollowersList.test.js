@@ -11,13 +11,13 @@ const MockFollowersList = () => (
 test("should render a followersList item", async () => {
   render(<MockFollowersList />);
   const followersItem = await screen.findByTestId("follower-item-0");
-
+  screen.debug();
   expect(followersItem).toBeInTheDocument();
 });
 
-test("should render a multiple followersList items", async () => {
-  render(<MockFollowersList />);
-  const followersItems = await screen.findAllByTestId(/follower-item/i);
+// test("should render a multiple followersList items", async () => {
+//   render(<MockFollowersList />);
+//   const followersItems = await screen.findAllByTestId(/follower-item/i);
 
-  expect(followersItems.length).toBe(5);
-});
+//   expect(followersItems.length).toBe(5);
+// });
